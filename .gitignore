@@ -1,0 +1,12 @@
+#terraform
+.terraform/*
+terraform.tfvars
+terraform.tfstate
+#stan infrastruktury z wrażliwymi danymi
+*.tfstate 
+#poprzednia wersja stanu (Terraform robi automatycznie)
+*.tfstate.backup
+# output z terraform plan -out=psydoc.tfplan
+*.tfplan
+#logi crashy Terraform
+crash.log
