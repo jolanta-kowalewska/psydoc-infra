@@ -5,18 +5,18 @@ resource "aws_dynamodb_table" "psydoc" {
   range_key    = "SK"
 
   attribute {
-  name = "PK"
-  type = "S"
+    name = "PK"
+    type = "S"
   }
 
   attribute {
-  name = "SK"
-  type = "S"
+    name = "SK"
+    type = "S"
   }
 
   server_side_encryption {
-  enabled     = true
-  kms_key_arn = var.kms_key_arn
+    enabled     = true
+    kms_key_arn = var.kms_key_arn
   }
 
   point_in_time_recovery {

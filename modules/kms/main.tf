@@ -1,7 +1,7 @@
 resource "aws_kms_key" "psydoc" {
-    description = "${var.project}-${var.environment} KMS key"
-    enable_key_rotation = true
-    deletion_window_in_days = 30
+  description             = "${var.project}-${var.environment} KMS key"
+  enable_key_rotation     = true
+  deletion_window_in_days = 30
 }
 
 resource "aws_kms_alias" "psydoc" {
