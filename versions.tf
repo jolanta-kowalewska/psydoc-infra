@@ -7,6 +7,14 @@ terraform {
       version = "~> 5.0"
     }
   }
+
+  backend "s3" {
+    bucket         = "psydoc-tfstate-708037416948"
+    key            = "psydoc/dev/terraform.tfstate"
+    region         = "eu-central-1"
+    encrypt        = true
+    dynamodb_table = "psydoc-tfstate-lock"
+  }
 }
 
 provider "aws" {

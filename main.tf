@@ -1,1 +1,6 @@
-# Moduły będą dodawane tutaj krok po kroku
+module "kms" {
+  source      = "./modules/kms"
+  environment = var.environment
+  project     = var.project
+}
+
