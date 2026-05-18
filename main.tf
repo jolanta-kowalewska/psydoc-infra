@@ -26,3 +26,10 @@ module "iam" {
   dynamo_table_arn = module.dynamodb.table_arn
   s3_bucket_arn    = module.s3.bucket_arn
 }
+
+module "cognito" {
+  source      = "./modules/cognito"
+  environment = var.environment
+  project     = var.project
+  kms_key_arn = module.kms.key_arn
+}
