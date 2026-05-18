@@ -44,3 +44,11 @@ module "lambda" {
   bucket_name     = module.s3.bucket_name
   lambda_role_arn = module.iam.lambda_role_arn
 }
+
+module "api_gateway" {
+  source        = "./modules/api_gateway"
+  environment   = var.environment
+  project       = var.project
+  function_arns = module.lambda.function_arns
+  user_pool_arn = module.cognito.user_pool_arn
+}

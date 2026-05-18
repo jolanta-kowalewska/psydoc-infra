@@ -1,11 +1,19 @@
 locals {
   functions = {
-    "clients-create"   = { handler = "clients.create", timeout = 10, memory = 256 }
-    "clients-get"      = { handler = "clients.get", timeout = 10, memory = 256 }
-    "sessions-create"  = { handler = "sessions.create", timeout = 15, memory = 256 }
-    "sessions-sign"    = { handler = "sessions.sign", timeout = 30, memory = 512 }
-    "consents-create"  = { handler = "consents.create", timeout = 15, memory = 256 }
-    "documents-export" = { handler = "documents.export", timeout = 30, memory = 512 }
+    "clients-create"    = { handler = "clients.create", timeout = 10, memory = 256 }
+    "clients-get"       = { handler = "clients.get", timeout = 10, memory = 256 }
+    "sessions-create"   = { handler = "sessions.create", timeout = 15, memory = 256 }
+    "sessions-sign"     = { handler = "sessions.sign", timeout = 30, memory = 512 }
+    "consents-create"   = { handler = "consents.create", timeout = 15, memory = 256 }
+    "documents-export"  = { handler = "documents.export", timeout = 30, memory = 512 }
+    "clients-list"      = { handler = "clients.list", timeout = 10, memory = 256 }
+    "groups-create"     = { handler = "groups.create", timeout = 10, memory = 256 }
+    "sessions-get"      = { handler = "sessions.get", timeout = 10, memory = 256 }
+    "sessions-list"     = { handler = "sessions.list", timeout = 10, memory = 256 }
+    "documents-get"     = { handler = "documents.get", timeout = 10, memory = 256 }
+    "consents-get"      = { handler = "consents.get", timeout = 10, memory = 256 }
+    "groups-get"        = { handler = "groups.get", timeout = 10, memory = 256 }
+    "groups-add-member" = { handler = "groups.add_member.get", timeout = 10, memory = 256 }
   }
 }
 
