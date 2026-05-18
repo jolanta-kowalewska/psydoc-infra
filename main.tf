@@ -33,3 +33,14 @@ module "cognito" {
   project     = var.project
   kms_key_arn = module.kms.key_arn
 }
+
+module "lambda" {
+  source          = "./modules/lambda"
+  environment     = var.environment
+  project         = var.project
+  kms_key_arn     = module.kms.key_arn
+  cognito_pool_id = module.cognito.user_pool_id
+  table_name      = module.dynamodb.table_name
+  bucket_name     = module.s3.bucket_name
+  lambda_role_arn = module.iam.lambda_role_arn
+}
