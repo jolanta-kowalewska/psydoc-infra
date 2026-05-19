@@ -18,3 +18,9 @@ output "dynamodb_table_name" {
   description = "DynamoDB table name"
   value       = module.dynamodb.table_name
 }
+
+
+output "github_actions_role_arn" {
+  description = "ARN roli dla GitHub Actions"
+  value       = module.github_actions.github_actions_role_arn
+}

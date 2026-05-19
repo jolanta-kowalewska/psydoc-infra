@@ -21,3 +21,14 @@ variable "project" {
   default     = "psydoc"
 }
 
+variable "github_repo" {
+  description = "GitHub repository name"
+  type        = string
+  default     = "psydoc-infra"
+}
+
+variable "github_username" {
+  description = "GitHub username"
+  type        = string
+  default     = "jolanta-kowalewska"
+}

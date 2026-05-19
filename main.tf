@@ -52,3 +52,11 @@ module "api_gateway" {
   function_arns = module.lambda.function_arns
   user_pool_arn = module.cognito.user_pool_arn
 }
+
+module "github_actions" {
+  source          = "./modules/github_actions"
+  environment     = var.environment
+  project         = var.project
+  github_repo     = var.github_repo
+  github_username = var.github_username
+}
